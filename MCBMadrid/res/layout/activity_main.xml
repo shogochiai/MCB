@@ -1,16 +1,126 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+       	android:layout_width="match_parent"
+       	android:layout_height="wrap_content">
+       	
+        <TextView
+	        android:id="@+id/tituloapp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:text="@string/title"
+	        android:textSize="18sp" />
+	    
+	</LinearLayout>
+	
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:paddingTop="20dp">
+        
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+                
+                <TextView 
+                    android:layout_margin="10dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Hora de salida"/>
+                
+                <EditText
+                    android:layout_margin="10dip"
+                    android:id="@+id/txtTiempoSalida"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:onClick="showFecha"
+                    android:hint="Seleccione hora"/>
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+                
+                <TextView
+                    android:layout_margin="10dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Destino"/>
+                
+                <EditText
+                    android:layout_margin="10dip"
+                    android:id="@+id/txtDestino"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:focusable="true"
+                    android:inputType="textAutoComplete"/>
+                
+            </TableRow>
+            
+            <TableRow 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+                
+                <TextView
+                    android:layout_margin="10dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Escoja transporte"/>
+                
+                <Spinner 
+                    android:id="@+id/spinnerTransporte"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"/>
+                
+            </TableRow>
+        </TableLayout>
+        
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dip"
+            android:orientation="horizontal">
+            
+            <Button 
+                android:id="@+id/btnBuscar"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:text="Buscar"/>
+            
+            <Button
+                android:id="@+id/btnSalir"
+                android:layout_height="wrap_content"
+                android:layout_width="100dip"
+                android:layout_margin="5dip"
+                android:text="Salir"/>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
