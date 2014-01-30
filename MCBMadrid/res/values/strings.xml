@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MCBMadrid</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">Madrid MCB</string>
+    <string name="txtTituloFragmentHora">Escoja la hora</string>
+    <string name="txtBotonFragmentHora">Escoger</string>
+
+    <string-array 
+        name="listaTransportes">
+        <item>Autobús</item>
+        <item>Metro</item>
+        <item>Tren de cercanías</item>
+        <item>Mixto</item>
+    </string-array>
+</resources>
