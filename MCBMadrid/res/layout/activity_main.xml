@@ -67,7 +67,7 @@
                     android:gravity="right"
                     android:text="Destino"/>
                 
-                <EditText
+                <AutoCompleteTextView
                     android:layout_margin="10dip"
                     android:id="@+id/txtDestino"
                     android:layout_height="wrap_content"

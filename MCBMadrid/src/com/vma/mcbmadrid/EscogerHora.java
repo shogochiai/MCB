@@ -20,7 +20,7 @@ public class EscogerHora extends DialogFragment implements OnEditorActionListene
 	private Button bGuardaHora;
 	private int hora, minuto;
 	
-	private final String CLASE = EscogerHora.class.getName();
+	private final String CLASE = MainActivity.class.getName() + "->" + EscogerHora.class.getName();
 
 	public EscogerHora(){
 	}
